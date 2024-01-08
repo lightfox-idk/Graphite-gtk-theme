@@ -148,11 +148,11 @@ $applet-primary:                        if($topbar == 'dark' and $theme == 'defa
 $titlebar-primary:                      if($topbar == 'dark' and $theme == 'default' and $variant == 'light', if($color_type == 'nord', #dbdee5, #e0e0e0), $primary);
 $osd-primary:                           if($theme == 'default', if($color_type == 'nord', #dbdee5, #e0e0e0), $primary);
 
-$background:                            if($variant == 'light', background(a), background(g));
+$background:                            if($variant == 'light', rgba(background(a), 0.7), rgba(background(g), 0.7));
 $surface:                               if($variant == 'light', background(a), background(h));
-$base:                                  if($variant == 'light', background(a), background(g));
-$base-alt:                              if($variant == 'light', background(b), background(f));
-$sidebg:                                if($variant == 'light', background(b), background(f));
+$base:                                  if($variant == 'light', background(a), rgba(background(g), 0.7));
+$base-alt:                              if($variant == 'light', background(b), rgba(background(f), 0.7));
+$sidebg:                                if($variant == 'light', rgba(background(b), 0.7), rgba(background(f), 0.7));
 
 @if $sidebar == 'contrast' {
   $sidebg:                              if($variant == 'light', background(h), background(d));
@@ -169,8 +169,8 @@ $osd:                                   background(e);
 $scrim:                                 background(f);
 $scrim-alt:                             background(g);
 $scrim-inverse:                         rgba(white, 0.1);
-$titlebar:                              if($topbar == 'dark', background(g), background(a));
-$titlebar-backdrop:                     if($topbar == 'dark', background(g), background(a));
+$titlebar:                              if($topbar == 'dark', rgba(background(g), 0.7), rgba(background(a), 0.7));
+$titlebar-backdrop:                     if($topbar == 'dark', rgba(background(g), 0.7), rgba(background(a), 0.7));
 $popover:                               $base;
 $panel-solid:                           if($topbar == 'dark', background(e), background(c)); // for Unity panel which doesn't allow translucent colors
 $panel:                                 rgba($panel-solid, $panel_opacity);
